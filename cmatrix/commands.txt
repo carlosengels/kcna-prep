@@ -1,0 +1,8 @@
+vim Dockerfile 
+docker ps -a
+docker images
+docker build . -t bswaggins/cmatrix
+docker run --rm -it bswaggins/cmatrix whoami
+docker run --rm -it bswaggins/cmatrix
+docker  rmi bswaggins/cmatrix
+docker buildx build --no-cache --platform linux/amd64,linux/arm64/v8 . -t bswaggins/cmatrix
